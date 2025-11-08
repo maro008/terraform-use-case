@@ -21,7 +21,7 @@ module "password_management" {
   source                           = "./module"
   rotate_backup_password_version   = 1
 }
-
+```
 
 3. You can swap the backup to be the main password. 
 ```bash 
@@ -30,6 +30,7 @@ module "password_management" {
   rotate_backup_password_version   = 1
 }
 ```
+
 
 4. If you wish to use this with another module. You can call the password value.
 ```bash
