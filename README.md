@@ -31,6 +31,7 @@ module "password_management" {
 }
 ```
 
+
 4. If you wish to use this with another module. You can call the password value.
 ```bash
 resource_that_password =  module.password_management.password
