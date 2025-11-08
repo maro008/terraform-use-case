@@ -10,24 +10,24 @@ You can rotate the backup password and set it as the main.
 1. Calling the module.
 ```bash 
 module "password_management" {
-  source                           = "./module"
+  source = "git@github.com:maro008/terraform-use-case.git//module/?ref=main"
 }
 ```
 
 
 2. If you wish to rotate the backup password. You can update it's version. 
-```
+```bash
 module "password_management" {
-  source                           = "./module"
+  source = "git@github.com:maro008/terraform-use-case.git//module/?ref=main"
   rotate_backup_password_version   = 1
 }
-
+```
 
 3. You can swap the backup to be the main password. 
 ```bash 
 module "password_management" {
-  source                           = "./module"
-  rotate_backup_password_version   = 1
+  source = "git@github.com:maro008/terraform-use-case.git//module/?ref=main"
+  use_backup_password   = true
 }
 ```
 
